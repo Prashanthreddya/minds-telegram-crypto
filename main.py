@@ -9,7 +9,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 import plotly.express as px
 
 # download the english words corpus from nltk
-nltk.download('words')
+nltk.download("words")
 nltk_words = set(map(lambda x: x.lower(), nltk.corpus.words.words()))
 nltk_words = nltk_words.union(
     set([
@@ -54,7 +54,7 @@ for i in tqdm(range(0, len(df))):
     # sentiment analyser is filtered instead of the entire data
     if "shib" in msg or "doge" in msg:
         # removing all special characters
-        msg = re.sub('[\!\@\#\$\%\^\&\*\_\-\+\=\;\:\<\>\,\.\?\/\|]', ' ', msg)
+        msg = re.sub("[\!\@\#\$\%\^\&\*\_\-\+\=\;\:\<\>\,\.\?\/\|]", " ", msg)
         msg_split = set(msg.split(" "))
         # getting the intersection of the sentence with the nltk 
         # english word corpus created earlier
@@ -101,8 +101,9 @@ print(df_aggregate)
 
 plt = px.line(
     df_aggregate, x="date", y="mean_sentiment", text = "mean_sentiment",
-    title='Date Wise Sentiment mean of Crypto.com Telegram channel', 
+    title="Date Wise Sentiment mean of Crypto.com Telegram channel",
     markers=True, labels=dict(date="Date",mean_sentiment="Mean Sentiment (%)"))
+
 plt.update_traces(textposition = "bottom right")
 
 plt.show()
