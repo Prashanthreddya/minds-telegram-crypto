@@ -21,3 +21,5 @@
 3. We notice that Sentiment Score is high on 2nd May (56.58%) but the number of messages is very low to give it sufficient weightage
 4. Among the days with substantial messages, we notice that the Sentiment score reached the highest of 54.24% on 5th May and the lowest of 49.97$ on 10th May
 5. Please open result_plot.html if an interactive plot is to be viewd, result_plot.png is a static plot is to be viewed. Aggregate numbers are available in result_data.csv
+
+![alt result_plot.png](result_plot.png)
